@@ -27,7 +27,7 @@ spec:
       containers:
       - env:
         - name: DT_CUSTOM_PROP
-          value: version=0.1.0 revision=1 releasename=sockshop-production-carts keptn_project=sockshop
+          value: version=0.1.0 revision=3 releasename=sockshop-production-carts keptn_project=sockshop
             keptn_service=carts keptn_stage=production keptn_deployment=primary
         - name: POD_NAME
           valueFrom:
