@@ -10,7 +10,7 @@ stages:
     test_strategy: "performance"
   - name: "production"
     approval_strategy: 
-      pass: "automatic"
+      pass: "manual"
       warning: "manual"
     deployment_strategy: "blue_green_service"
     remediation_strategy: "automated"
