@@ -15,13 +15,11 @@ spec:
         properties:
           teststrategy: functional
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: automatic
           warning: automatic
       - name: release
-        properties: null
     - name: delivery-direct
       tasks:
       - name: deployment
@@ -31,13 +29,11 @@ spec:
         properties:
           teststrategy: functional
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: automatic
           warning: automatic
       - name: release
-        properties: null
   - name: staging
     sequences:
     - name: delivery
@@ -51,13 +47,11 @@ spec:
         properties:
           teststrategy: performance
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: automatic
           warning: automatic
       - name: release
-        properties: null
     - name: rollback
       triggeredOn:
       - event: staging.delivery.finished
@@ -66,7 +60,6 @@ spec:
             result: fail
       tasks:
       - name: rollback
-        properties: null
     - name: delivery-direct
       triggeredOn:
       - event: dev.delivery-direct.finished
@@ -78,13 +71,11 @@ spec:
         properties:
           teststrategy: performance
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: automatic
           warning: automatic
       - name: release
-        properties: null
   - name: production
     sequences:
     - name: delivery
@@ -98,13 +89,11 @@ spec:
         properties:
           teststrategy: ""
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: manual
           warning: manual
       - name: release
-        properties: null
     - name: rollback
       triggeredOn:
       - event: production.delivery.finished
@@ -113,7 +102,6 @@ spec:
             result: fail
       tasks:
       - name: rollback
-        properties: null
     - name: delivery-direct
       triggeredOn:
       - event: staging.delivery-direct.finished
@@ -125,10 +113,8 @@ spec:
         properties:
           teststrategy: ""
       - name: evaluation
-        properties: null
       - name: approval
         properties:
           pass: manual
           warning: manual
       - name: release
-        properties: null
