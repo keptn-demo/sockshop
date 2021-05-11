@@ -15,10 +15,6 @@ spec:
         properties:
           teststrategy: functional
       - name: evaluation
-      - name: approval
-        properties:
-          pass: automatic
-          warning: automatic
       - name: release
     - name: delivery-direct
       tasks:
@@ -29,10 +25,6 @@ spec:
         properties:
           teststrategy: functional
       - name: evaluation
-      - name: approval
-        properties:
-          pass: automatic
-          warning: automatic
       - name: release
   - name: staging
     sequences:
@@ -47,10 +39,6 @@ spec:
         properties:
           teststrategy: performance
       - name: evaluation
-      - name: approval
-        properties:
-          pass: automatic
-          warning: automatic
       - name: release
     - name: rollback
       triggeredOn:
@@ -71,10 +59,6 @@ spec:
         properties:
           teststrategy: performance
       - name: evaluation
-      - name: approval
-        properties:
-          pass: automatic
-          warning: automatic
       - name: release
   - name: production
     sequences:
