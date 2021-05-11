@@ -1,7 +1,7 @@
 apiVersion: spec.keptn.sh/0.2.0
 kind: Shipyard
 metadata:
-  name: ""
+  name: "test"
 spec:
   stages:
   - name: dev
@@ -85,10 +85,6 @@ spec:
       - name: deployment
         properties:
           deploymentstrategy: blue_green_service
-      - name: test
-        properties:
-          teststrategy: ""
-      - name: evaluation
       - name: approval
         properties:
           pass: manual
@@ -109,10 +105,6 @@ spec:
       - name: deployment
         properties:
           deploymentstrategy: direct
-      - name: test
-        properties:
-          teststrategy: ""
-      - name: evaluation
       - name: approval
         properties:
           pass: manual
